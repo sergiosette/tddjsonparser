@@ -15,3 +15,9 @@ class TDDJSONParserTests: XCTestCase {
         XCTAssertNil(parser.parse(""))
     }
 }
+
+class JSONParser {
+    func parse(_ json: String) -> Any? {
+        return nil
+    }
+}
