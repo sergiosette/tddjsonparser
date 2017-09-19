@@ -26,6 +26,10 @@ class TDDJSONParserTests: XCTestCase {
     func testFalse() {
         XCTAssertFalse(parser.parse("false") as! Bool)
     }
+    
+    func testNumber() {
+        XCTAssertEqual(parser.parse("0") as! Int, 0)
+    }
 }
 
 class JSONParser {
