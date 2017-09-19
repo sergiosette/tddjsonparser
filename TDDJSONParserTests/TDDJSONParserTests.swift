@@ -30,10 +30,6 @@ class TDDJSONParserTests: XCTestCase {
 
 class JSONParser {
     func parse(_ json: String) -> Any? {
-        switch json {
-        case "true": return true
-        case "false": return false
-        default: return nil
-        }
+        return Bool(json)
     }
 }
