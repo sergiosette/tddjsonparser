@@ -10,5 +10,8 @@ import XCTest
 @testable import TDDJSONParser
 
 class TDDJSONParserTests: XCTestCase {
-    
+    func testEmpty() {
+        let parser = JSONParser()
+        XCTAssertNil(parser.parse(""))
+    }
 }
