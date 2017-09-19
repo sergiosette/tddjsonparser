@@ -34,6 +34,8 @@ class TDDJSONParserTests: XCTestCase {
 
 class JSONParser {
     func parse(_ json: String) -> Any? {
-        return Bool(json)
+        if let boolResult = Bool(json) { return boolResult }
+        if let intResult = Int(json) { return intResult }
+        return nil
     }
 }
