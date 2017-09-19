@@ -10,13 +10,16 @@ import XCTest
 @testable import TDDJSONParser
 
 class TDDJSONParserTests: XCTestCase {
+    var parser: JSONParser!
+    override func setUp() {
+        parser = JSONParser()
+    }
+    
     func testEmpty() {
-        let parser = JSONParser()
         XCTAssertNil(parser.parse(""))
     }
     
     func testTrue() {
-        let parser = JSONParser()
         XCTAssertTrue(parser.parse("true") as! Bool)
     }
 }
